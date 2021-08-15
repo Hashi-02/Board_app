@@ -1,0 +1,20 @@
+<h2>投稿作成</h2>
+<%= form_with url: "/posts/create"  do |form| %>
+ <% @post.errors.full_messages.each do |message| %>
+  <%= message %>
+<% end %>
+
+<p>名前</p>
+<textarea name="user"><%= @post.user %></textarea>
+<br>
+<p>ゼミ名</p>
+<textarea name="title"><%= @post.title %></textarea>
+<br>
+<p>なに系？</p>
+<%= form.select :type, [['M系','M系' ],['S系', 'S系'],['C系', 'C系']], {include_blank: "選択して下さい"} %>
+<br>
+<p>どんなゼミ？</p> 
+<textarea name="content"><%= @post.content %></textarea>
+<br>
+<input type="submit" value="投稿">
+<% end %>

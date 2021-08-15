@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    models:
+      board: 
+    attributes:
+      board:
+        user: 投稿者名
+        title: ゼミ名
+        type: なに系
+        content: ゼミ内容
