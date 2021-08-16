@@ -1,8 +1,11 @@
-<h2>投稿詳細</h2>
+<p>←投稿一覧</p>
 投稿者名: <%= @post.user %>
-系統: <%= @post.type %>
+<br>
+なに系か: <%= @post.type %>
+<br>
 ゼミ名: <%= @post.title %>
-本文: <%= @post.content %>
+<br>
+ゼミの内容: <%= @post.content %>
 <br>
 投稿時間: <%= @post.created_at.to_s(:datetime_jp) %>
 <br>

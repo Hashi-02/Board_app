@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 
+  
   def index
     @posts = Board.all.order(created_at: :desc)
   end

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>掲示板はしを</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,21 +12,29 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body>
+  <div class="center">
   <header>
-  <h1>総情ゼミ投稿掲示板</h1>
-  <h1>はしをくん</h1>
+    
 
-<%= link_to("HOME","/") %>
-<%= link_to("投稿一覧","/posts/index") %>
-<%= link_to("新規作成","/posts/new") %>
+      <div class="container">
+        <p class = "item top">総情ゼミ投稿掲示板<br>はしをくん</p>
+        <nav>
+          <ul>
+              <li><%= link_to("HOME","/",class: 'a') %>
+              <li><%= link_to("投稿一覧","/posts/index",class: 'a') %>
+              <li><%= link_to("新規投稿","/posts/new",class: 'a') %>
+          </ul>
+        </nav>  
+      </div>
+  </header>
 
-</header>
-
- <% if flash[:notice] %>
-        <%= flash[:notice] %>
-　<% end %>
+    <% if flash[:notice] %>
+      <%= flash[:notice] %>
+    <% end %>
 
     <%= yield %>
+    </div>
   </body>
 </html>
