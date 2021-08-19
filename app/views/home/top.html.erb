@@ -1,17 +1,37 @@
-<h2>はしをくんについて</h2>
-<p>はしをくんは関西大学総合情報学部のゼミの情報を
+<div class="about">
+<div class="left-box">
+<h2 class="title">はしをくんについて</h2>
+<br>
+<p class="explanation">はしをくんは関西大学総合情報学部のゼミの情報を
 <br>共有できる場所でありたいと考えています。
 <br>コロナ禍でもゼミの情報を共有できる。
 <br>そんなことを実現できるのがはしをくんです。</p>
+<br>
+<%= link_to("投稿一覧","/posts/index", class: "button") %>
+<%= link_to("新規投稿","/posts/new", class: "button") %>
+</div>
 
-<%= link_to("投稿一覧","/posts/index") %>
-<%= link_to("新規投稿","/posts/new") %>
+<div class="rigth-box">
+<img src="assets/top.png" >
+</div>
+</div>
 
+
+<div class=index0>
 <h2>投稿一覧</h2>
-<% @posts.each do |post| %>
-    <%= link_to(post.title,"/posts/#{post.id}") %>
-    <br>
-    <%= post.content %>
-    <br>
-<% end %>
-<%= link_to("もっと見る","/posts/index") %>
+<div id="sec">
+  <ul>
+  <% @posts.each do |post| %>
+    <li>
+      <span class="fa fa-code"></span>
+      <div class="title01">
+       <%= post.title %>
+      </div>
+      <br>
+      <%= post.content %>
+    </li>
+   <% end %> 
+  </ul>
+</div>
+<%= link_to("もっと見る","/posts/index", class: "button") %>
+</div>

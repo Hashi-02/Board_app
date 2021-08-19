@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def top
-      @posts = Board.all.order(created_at: :desc)
+      @posts = Board.last(3)
   end
 end

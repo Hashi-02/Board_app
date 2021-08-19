@@ -1,15 +1,45 @@
-<h2>投稿一覧</h2>
-<p>ここのページでは投稿一覧を見ることができます。
+<div class="about">
+<div class="left-box">
+<h2 class="title">投稿一覧</h2>
+<br>
+<p class="explanation">ここのページでは投稿一覧を見ることができます。
 <br>気になる投稿があればクリックをして詳細を見ること
 <br>ができます。
-<br>また、編集や削除は詳細からできます。
-</p>
-<% @posts.each do |post| %>
-    <%= link_to(post.title,"/posts/#{post.id}") %>
-    <br>
-    <%= post.type %>
-    <br>
-    <%= post.content %>
-    <br>
-<% end %>
-<p>ページ上部へ</p>
+<br>また、編集や削除は詳細からできます。</p>
+<br>
+</div>
+
+<div class="rigth-box">
+<img src="/assets/index.png" >
+</div>
+</div>
+
+
+<div class=index0>
+<h2>投稿一覧</h2>
+<div id="sec">
+  <ul>
+  <% @posts.each do |post| %>
+  <%= link_to("/posts/#{post.id}") do %>
+    <li>
+    
+      <span class="fa fa-code"></span>
+      <div class="title01">
+       <%= post.title %>
+      </div>
+       <br>
+       <div class="type01">
+      <%= post.type %>
+      </div>
+      <br>
+      <div class="content01">
+      <%= post.content %>
+      </div>
+      
+    </li>
+    <% end %>
+    <% end %> 
+   
+  </ul>
+</div>
+</div>

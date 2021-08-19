@@ -1,20 +1,29 @@
-<h2>編集する</h2>
+<div class="index0">
+<div class="new">
+<h2 class="title2">編集する</h2>
 <%= form_with url: "/posts/#{@post.id}/update" do |form| %>
 <% @post.errors.full_messages.each do |message| %>
 <%= message %>
 <% end %>
 
+<div class="item">
 <p>名前</p>
-<textarea name="user"><%= @post.user %></textarea>
+<textarea class="field" name="user" rows="1"><%= @post.user %></textarea>
 <br>
 <p>ゼミ名</p>
-<textarea name="title"><%= @post.title %></textarea>
+<textarea class="field" name="title" rows="1"><%= @post.title %></textarea>
 <br>
 <p>なに系？</p>
 <%= form.select :type, [['M系','M系' ],['S系', 'S系'],['C系', 'C系']], {include_blank: false, selected: @post.type } %>
 <br>
-<p>どんなゼミ？</p> 
-<textarea name="content"><%= @post.content %></textarea>
+<p class="o">どんなゼミ？</p> 
+<textarea name="content" class="textarea-primary"><%= @post.content %></textarea>
 <br>
-<input type="submit" value="投稿">
+<input type="submit" value="編集する" class="submit">
 <% end %>
+</div>
+</div>
+</div>
+
+
+

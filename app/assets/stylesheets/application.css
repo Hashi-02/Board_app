@@ -3,17 +3,20 @@
     margin: 0;
     padding: 0;
   }
+  
 .center{
     width: 1080px;
     margin: 0 auto;
 }
 .container {
+    margin-top: 30px;
     display: flex;
     justify-content: flex-end;
   }
 .top{
     text-align: center;
     margin-right: auto;
+    color: #AC77CC;
 }
 nav{
     overflow: hidden;
@@ -26,8 +29,230 @@ nav li{
 .a{
     display: block;
     text-decoration: none;
-    color: royalblue;
     margin: 14px 16px 0px;
 }
 /* ここまで共通箇所 */
 
+.about{
+    height: 800px;
+}
+.right-box{
+    float: left;
+}
+.left-box{
+    float: left;
+    position: relative;
+}
+img{
+    margin-top: 100px;
+    position: absolute;
+    transform: scale(-1, 1);
+    width: 650px;
+    z-index: 2;
+}
+.title{
+    margin-top: 200px;
+    font-size: 54px;
+}
+.explanation{
+    line-height: 70px;
+    font-size: 26px;
+}
+.button{
+    margin-top: 32px;
+    margin-left: 20px;
+    font-size: 26px;
+    padding: 8px 52px;
+    background: #3b5998;
+    color: white;
+    border: 1px solid #3b5998;
+    border-radius: 50px;
+    text-decoration: none;
+}
+.index0{
+    text-align: center;
+}
+h2{
+    font-size: 53px;
+}
+.field{
+    resize: none;
+}
+
+
+
+
+/*--------------------------------------
+  カード型_03
+--------------------------------------*/
+#sec {
+    padding: 0;
+    background: #fff;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  
+  #sec ul {
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    list-style: none;
+    border: none;
+  }
+  #sec ul li {
+    padding: 40px;
+    width: 320px;
+    transition: box-shadow 0.3s;
+  }
+  #sec ul li:hover {
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  }
+  #sec ul li:hover span {
+    color: #63B7E6;
+  }
+  #sec ul li:hover p {
+    color: #555;
+  }
+  #sec ul li:hover .title01 {
+    color: #63B7E6;
+  }
+  #sec ul li:hover .title01:after {
+    width: 25px;
+  }
+  #sec ul li span {
+    font-size: 2.6em;
+    display: block;
+    transition: color 0.3s;
+    color: #A2A2A2;
+  }
+  #sec ul li span:before, #sec ul li span:after {
+    position: static;
+  }
+  #sec ul li .title01 {
+    color: #6f6f6f;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 100;
+    transition: color 0.3s;
+  }
+  #sec ul li .type01 {
+    color: #6f6f6f;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 100;
+    transition: color 0.3s;
+  }
+  #sec ul li .content01 {
+    color: #6f6f6f;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 100;
+    transition: color 0.3s;
+  }
+
+
+
+  /* #sec ul li .title01:after {
+    content: "";
+    position: relative;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: #6f6f6f;
+    transition: width 0.3s;
+  } */
+  #sec ul li p {
+    color: #A2A2A2;
+    text-align: left;
+    text-indent: 1em;
+    font-size: 16px;
+    line-height: 26px;
+    transition: color 0.3s;
+  }
+  .more{
+    margin-top: 32px;
+    margin-left: 20px;
+    font-size: 26px;
+    padding: 8px 52px;
+    background: #3b5998;
+    color: white;
+    border: 1px solid #3b5998;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+/* 波打たせるやつ */
+.wave{
+    position:relative;
+    height: 200px;/*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
+    margin-top: 200px;
+    }
+canvas{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    }
+.new{
+    width: 640px;
+    height: 450px;
+    margin: 0 auto;
+
+}
+
+.titile2{
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+.item{
+    font-size: 20px;
+}
+.o{
+    padding-top: 10px;
+}
+.textarea-primary {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: 150px;
+    max-height: 170px;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    /* border: 1px solid #e5e5e5; */
+    font-size: 14px;
+    outline: none;
+    line-height: 1.6;
+    resize: vertical;
+  }
+  .submit {
+    margin-top: 10px;
+    display       : inline-block;
+    border-radius : 11%;          /* 角丸       */
+    font-size     : 32pt;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 12px 12px;   /* 余白       */
+    background    : #000066;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    transition    : .3s;         /* なめらか変化 */
+    /* box-shadow    : 6px 6px 3px #666666;  影の設定 */
+    border        : 2px solid #000066;    /* 枠の指定 */
+  }
+  .submit:hover {
+    box-shadow    : none;        /* カーソル時の影消去 */
+    color         : #000066;     /* 背景色     */
+    background    : #ffffff;     /* 文字色     */
+  }
+
+  .detail{
+    padding-top: 100px;
+    width: 540px;
+    height: 400px;
+    margin: 0 auto;
+  }
