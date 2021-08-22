@@ -1,0 +1,8 @@
+
+    <h1 class="users-heading">ユーザー一覧</h1>
+    <% @users.each do |user| %>
+    
+          <%= link_to(user.name, "/users/#{user.id}") %>
+         
+    
+    <% end %>

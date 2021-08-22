@@ -8,6 +8,18 @@ Rails.application.routes.draw do
   get '/' => "home#top"
   get "posts/:id" => "posts#show"
 
+  get "signup" => "users#new"
+  post "users/create" => "users#create"
+  get "users/index" => "users#index"
+  get "users/:id" => "users#show"
+  get "users/:id/edit" => "users#edit"
+  post "users/:id/update" => "users#update"
+
+  get "login" => "users#login_form"
+  post "login" => "users#login"
+  post "logout" =>"users#logout"
+
+
 
   delete "posts/:id/destroy" => "posts#destroy"
   
