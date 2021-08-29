@@ -1,13 +1,20 @@
-新規ユーザー登録
+<div class="index1">
+<div class="new">
+<h2 class="title2">新規ユーザー登録</h2>
 <% @user.errors.full_messages.each do |message| %>
     <%= message %>
 <% end %>
 <%= form_with url: "/users/create" do |form| %>
-<p>ユーザー名</p>
+<div class="item">
+<p>ユーザー名(公開されます)</p>
 <input name="name" value="<%= @user.name %>">
 <p>メールアドレス</p>
-<input name="email" value="<%= @user.email %>">
-<p>パスワード</p>
+k<input name="email" value="<%= @user.email %>">@kansai-u.ac.jp
+<p>パスワード(LMSなどで使ってるパスワードでなくてもOK)</p>
 <input name="password" type="password" value="<%= @user.password %>">
+<br>
 <input type="submit" value="新規登録">
 <% end %>
+</div>
+</div>
+</div>

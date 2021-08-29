@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
   }
-  
 .center{
     width: 1080px;
     margin: 0 auto;
@@ -16,7 +15,8 @@
 .top{
     text-align: center;
     margin-right: auto;
-    color: #AC77CC;
+    color: #6C63FF;
+    font-weight: bold;
 }
 nav{
     overflow: hidden;
@@ -30,6 +30,8 @@ nav li{
     display: block;
     text-decoration: none;
     margin: 14px 16px 0px;
+    color: #6C63FF;
+    font-weight: bold;
 }
 /* ここまで共通箇所 */
 
@@ -63,14 +65,29 @@ img{
     margin-left: 20px;
     font-size: 26px;
     padding: 8px 52px;
-    background: #3b5998;
+    background: #6C63FF;
     color: white;
-    border: 1px solid #3b5998;
+    border: 1px solid #6C63FF;
     border-radius: 50px;
     text-decoration: none;
 }
+.button1{
+  margin-top: 32px;
+  /* margin-left: 20px; */
+  font-size: 26px;
+  padding: 8px 52px;
+  background: #6C63FF;
+  color: white;
+  border: 1px solid #6C63FF;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
 .index0{
     text-align: center;
+}
+.index1{
+  text-align:left;
 }
 h2{
     font-size: 53px;
@@ -201,7 +218,6 @@ canvas{
     width: 640px;
     height: 450px;
     margin: 0 auto;
-
 }
 
 .titile2{
@@ -255,4 +271,8 @@ canvas{
     width: 540px;
     height: 400px;
     margin: 0 auto;
+  }
+
+  .wrapper{
+    height: 500px;
   }

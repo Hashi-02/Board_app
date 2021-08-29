@@ -8,3 +8,7 @@ class Board < ApplicationRecord
 
     self.inheritance_column = :_type_disabled 
 end
+
+def user
+    return User.find_by(id: self.user_id) 
+end

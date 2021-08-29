@@ -4,7 +4,11 @@
 <h2 class="title2">投稿詳細</h2>
 </div>
 <div class="detail">
-<%= @user.name %>
+<%
+=begin%>
+ <%= @user.name %> 
+<%
+=end%>
 <br>
 投稿者名: <%= @post.user %>
 <br>
@@ -15,6 +19,9 @@
 ゼミの内容: <%= @post.content %>
 <br>
 投稿時間: <%= @post.created_at.to_s(:datetime_jp) %>
-<%= link_to("編集","/posts/#{@post.id}/edit") %>
-<%= link_to "削除", "/posts/#{@post.id}/destroy", method: :delete, data: {confirm: "削除しますか"}  %>
+<% if @post.user_id == @current_user.id %>
+    <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+    <%= link_to "削除", "/posts/#{@post.id}/destroy", method: :delete, data: {confirm: "削除しますか"}  %>
+      <!-- 以下の<% %>を使ってif文のendを追加してください -->
+<% end %>
 </div>
