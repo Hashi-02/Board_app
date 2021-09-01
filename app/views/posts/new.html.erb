@@ -7,13 +7,13 @@
 <% end %>
 
 <div class="item">
-<p>名前</p>
+<p class="text0">名前</p>
 <textarea class="field" name="user" rows="1"><%= @post.user %></textarea>
 <br>
-<p>ゼミ名</p>
+<p class="text0">ゼミ名</p>
 <textarea class="field" name="title" rows="1"><%= @post.title %></textarea>
 <br>
-<p>なに系？</p>
+<p class="text0">なに系？</p>
 <%= form.select :type, [['M系','M系' ],['S系', 'S系'],['C系', 'C系']], {include_blank: "選択して下さい", selected: @post.type } %>
 <br>
 <p class="o">どんなゼミ？</p> 
