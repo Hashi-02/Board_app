@@ -17,7 +17,7 @@ class PostsController < ApplicationController
   def show
     @post = Board.find_by(id: params[:id])
     # @user = @post.user
-    @user = User.find_by(id: @post.user_id.to_i)
+    @user = User.find_by(id: @post.user_id)
   end
 
   def create
@@ -26,7 +26,7 @@ class PostsController < ApplicationController
       flash[:notice] = "投稿を作成しました"
       redirect_to posts_index_path	
     else
-      redirect_to posts_new_path	
+      render posts_new_path	
     end
   end
 
