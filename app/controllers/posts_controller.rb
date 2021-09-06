@@ -1,8 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user
   before_action :ensure_correct_user, {only: [:edit, :update, :destroy]}
-
-
   
   def index
     @posts = Board.all.order(created_at: :desc)
@@ -19,17 +17,16 @@ class PostsController < ApplicationController
   def show
     @post = Board.find_by(id: params[:id])
     # @user = @post.user
-    @user = User.find_by(id: @post.user_id)
-
+    @user = User.find_by(id: @post.user_id.to_i)
   end
 
   def create
     @post = Board.new(content: params[:content],title: params[:title], user: params[:user], type: params[:type], user_id: @current_user.id )
     if @post.save
       flash[:notice] = "投稿を作成しました"
-      redirect_to("/posts/index")
+      redirect_to posts_index_path	
     else
-      render("posts/new")
+      redirect_to posts_new_path	
     end
   end
 
