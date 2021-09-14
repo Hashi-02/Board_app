@@ -10,5 +10,5 @@ class Board < ApplicationRecord
 end
 
 def user
-    return User.find_by(id: self.user_id) 
+    return Borad.find_by(id: self.id) 
 end
